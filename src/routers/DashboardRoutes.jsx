@@ -19,8 +19,10 @@ export const DashboardRoutes = () => {
                     <Route exact path="/child-dashboard/:state" component={ChildDashboard} />
                     <Route exact path="/child-dashboard" component={ChildDashboard} />
                     <Route exact path="/profile" component={Profile} />
+                    <Route exact path="/post" component={Post} />
+                    <Route exact path="/post:post" component={Post} />
                     <Route exact path="/news" component={PostCollection} />
-                    <Route exact path="/news:index" component={Post} />
+            
                     <Redirect to="/home" />
                     {/* <Route exact path="/hero/:heroeId" component={HeroesScreen} /> */}
                 </Switch>

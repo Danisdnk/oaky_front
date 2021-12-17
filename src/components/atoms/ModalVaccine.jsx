@@ -5,8 +5,7 @@ import { createVaccine } from './../../controllers/miApp.controller';
 import { cantDosisPorVacuna, calendarioVacunacion } from '../../types/vaccinesInCalendar';
 import { findVaccineByChild } from './../../controllers/miApp.controller';
 import { useLocation, useParams } from 'react-router';
-const { format } = require("date-fns");
-
+import moment from 'moment';
 export const ModalVaccine = ({ child }) => {
     const { Option } = Select;
     const [log, setLog] = useState(false)
@@ -31,9 +30,8 @@ export const ModalVaccine = ({ child }) => {
         setvaccineChild(getUser)
     }
 
-
     //* calcula cantidad meses vividos para mostrar las vacunas aplicables 
-    let childDate = format(new Date(child.bornDate), "dd-MM-yyyy")
+    let childDate = moment(child.bornDate, "DD-MM-YYYY").format('MM-DD-YYYY')
     const childDateInMonths = Math.round((Date.now() - new Date(childDate)) / 2.628e+9)
     let aplicables = [];
 
@@ -55,9 +53,11 @@ export const ModalVaccine = ({ child }) => {
         //* revisa las vacunas aplicadas y las elimina de la lista posible si cumple con el total de las dosis para dicha vacuna
         calendarioVacunacion.sort().forEach(function (vac, i) {
             vaccineChild.sort().map(v => {
+              
                 if (v.name === vac.nombre && v.tags.map(m => m.split(",").sort()).map(tag => tag.length)[0] === vac.dosis.length) {
-                    aplicables.splice(vac.nombre, 1)
+                    return aplicables.splice(vac.nombre, 1)
                 }
+               
             });
         });
 

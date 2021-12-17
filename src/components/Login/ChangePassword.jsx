@@ -22,23 +22,30 @@ export const ChangePassword = ({ history }) => {   // eslint-disable-line no-use
     const onFinish = async (fieldsValues) => {
 
         console.log(fieldsValues, "valores")
-     
+
         const values = {
             ...fieldsValues,
             email: location.email,
-        
+
         }
         const create = await changePassword(values);
 
         if (create.ok) {
+
+            Modal.success({
+                title: 'Exito',
+                content: create.msg,
+            });
+
             let path = `/login`;
+
             history.push(path);
         }
 
         if (!create.ok) {
 
             Modal.success({
-                title: 'Exito',
+                title: 'no se pudo actualizar',
                 content: create.msg,
             });
 

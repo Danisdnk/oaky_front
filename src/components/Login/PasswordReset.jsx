@@ -21,7 +21,7 @@ export const PasswordReset = ({ history }) => {
 
         const resetEmail = await resetPassword(values);
         if (resetEmail.ok) {
-            debugger
+    
             Modal.success({ title: 'Actualizado', content: resetEmail.msg, footer: null });
             // <Link to={{ pathname: '/child-dashboard/:state', state: { id } }} />
             history.push({ pathname: '/reset-code:email', email: fieldsValues['email'] });

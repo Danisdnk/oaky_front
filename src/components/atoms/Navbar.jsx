@@ -58,7 +58,7 @@ export const Navbar = () => {
             to="/news"
           >
 
-            Noticias
+            Articulos
 
           </NavLink>
         </Menu.Item>

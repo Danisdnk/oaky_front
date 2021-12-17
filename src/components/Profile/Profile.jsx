@@ -94,6 +94,7 @@ export const Profile = ({ history }) => {
             <PageHeader
                 className="site-page-header-responsive"
                 onBack={() => window.history.back()}
+              
                 title="Perfil"
                 subTitle="Gestion de usuarios"
                 extra={[

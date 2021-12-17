@@ -1,10 +1,9 @@
 
-export const calendarioVacunacion = [
-
+export const Posts = [
     {
         imagen: 'calendar',
-        titulo: 'BCG',
-        subtitulo: 0,
+        titulo: 'controles de vacunacion',
+        subtitulo: ' En el control de salud podés evacuar tus dudas y dificultades sobre la crianza',
         contenido: `   <b>En el primer control de salud de tu bebé a los 7-10 días de vida, el equipo de salud</b>:
         Le hará una revisación completa —incluyendo un control de la vista—, lo pesará, lo medirá y controlará si su cadera está bien. Verificará su carnet de de vacunación y le aplicará las vacunas que necesite.
         Conversará con vos acerca de:
@@ -45,80 +44,12 @@ export const calendarioVacunacion = [
         `
     },
     {
-        nombre: 'Hepatitis B neonatal',
-        edadMinima: 0,
-        dosis: ['Unica']
+        imagen: "calendar",
+        titulo: 'Espasmo del sollozo, cómo actuar  ',
+        subtitulo: 'Aveigua como prevenir el sollozo de tu bebe',
+        contenido: ` Según datos de la Asociación Española de Pediatría (AEP) se estima que alrededor de cinco de cada 100 niños sanos entre los seis meses y los cinco años padecen lo que se conoce como espasmo del sollozo, una situación benigna que no se asocia con ninguna enfermedad, pero que puede provocar un momento de gran angustia y de miedo en los progenitores, que ven cómo sus hijos dejan de respirar, se ponen morados, sufren una especie de convulsiones, e incluso pueden llegar a perder la conciencia.
+
+        Como el propio nombre del fenómeno indica, el espasmo del sollozo, también conocido como apnea de llanto, está muy relacionado con el lloro. No en vano, suele producirse debido al llanto derivado de una rabieta, de una caída, de un golpe, e incluso de un susto inesperado; y son eventos más habituales en menores cuyo padre o madre también los sufrió en su primera infancia.
+        Las pérdidas de conciencia, la ausencia de respiración y las convulsiones no dejan secuelas en los niños, como ya hemos comentado, y tan solo unos segundos después ya están recuperados. Además, por regla general, a partir de los cinco o seis años (y en muchos casos antes) estos episodios desaparecen a medida que los pequeños desarrollan su capacidad para gestionar el dolor y las frustraciones.  `
     },
-    {
-        nombre: 'Tuberculosis',
-        edadMinima: 2,
-        dosis: ['Primera', 'Refuerzo']
-    },
-    {
-        nombre: 'Neumococo conjugada',
-        edadMinima: 2,
-        dosis: ['Primera', 'Segunda', 'Tercera', 'Refuerzo']
-    },
-    {
-        nombre: 'IPV',
-        edadMinima: 2,
-        dosis: ['Primera', 'Segunda', 'Tercera', 'Refuerzo']
-    },
-    {
-        nombre: 'Rotavirus',
-        edadMinima: 2,
-        dosis: ['Primera', 'Segunda']
-    },
-    {
-        nombre: 'Quíntuple pentavalente',
-        edadMinima: 2, dosis: ['Primera', 'Segunda']
-    },
-    {
-        nombre: 'Meningococo',
-        edadMinima: 3, dosis: ['Primera', 'Segunda', 'Tercera']
-    },
-    {
-        nombre: 'Antigripal',
-        edadMinima: 6, dosis: ['Refuerzo']
-    },
-    {
-        nombre: 'Hepatitis A',
-        edadMinima: 12,
-        dosis: ['Unica']
-    },
-    {
-        nombre: 'Triple viral SRP',
-        edadMinima: 12,
-        dosis: ['Primera', 'Segunda']
-    },
-    {
-        nombre: 'Varicela',
-        edadMinima: 15,
-        dosis: ['Unica']
-    },
-    {
-        nombre: 'Fiebre amarilla',
-        edadMinima: 18,
-        dosis: ['Primera', 'Segunda']
-    },
-    {
-        nombre: 'Triple bacteriana celular',
-        edadMinima: 60,
-        dosis: ['Primera', 'Segunda', 'Tercera', 'Refuerzo']
-    },
-    {
-        nombre: 'Hepatitis B',
-        edadMinima: 132,
-        dosis: ['Primera', 'Segunda', 'Tercera']
-    },
-    {
-        nombre: 'VPH',
-        edadMinima: 132,
-        dosis: ['Primera', 'Segunda']
-    },
-    {
-        nombre: 'Triple bacteriana acelular',
-        edadMinima: 132,
-        dosis: ['Unica']
-    },
-];
+]

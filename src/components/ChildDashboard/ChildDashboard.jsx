@@ -38,7 +38,6 @@ export const ChildDashboard = ({ history }) => {
     }
 
     const obtenerControles = async () => {
-        debugger;
         const getUser = await findControlsForChild(id._id)
         seControlChild(getUser)
     }

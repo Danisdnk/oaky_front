@@ -1,7 +1,7 @@
 import urlWebServices from "./webServices.js";
 
 export const login = async function (login) { //url webservices
-    debugger;
+ 
     let url = urlWebServices.login;
     //armo json con datos
     const formData = new URLSearchParams({ email: login.email, password: login.password })
@@ -125,7 +125,7 @@ export const createUser = async function (formValues) { //url webservices
 
 
 export const resetPassword = async function (formValues) { //url webservices
-    debugger;
+   
     let url = urlWebServices.resetPassword;
     const formData = new URLSearchParams({
         email: formValues.email
@@ -218,6 +218,7 @@ export const verifyResetCode = async function (formValues) { //url webservices
  * @param method PATCH
 */
 export const changePassword = async function (passAndEmail) { //url webservices
+  
     let url = urlWebServices.changePasswordReset;
     const formData = new URLSearchParams({
         email: passAndEmail.email,
@@ -411,7 +412,7 @@ export const createVaccine = async function (vac) { //url webservices
 }
 
 export const findVaccineByChild = async function (child) { //url webservices
-    debugger
+
     let url = urlWebServices.findVaccineChild + child
     try {
 
@@ -438,7 +439,7 @@ export const findVaccineByChild = async function (child) { //url webservices
  * @param method DELETE
 */
 export const updateVaccine = async function (vac) { //url webservices
-    debugger
+ 
     console.log(vac, "vacunas en controller")
     let url = urlWebServices.updateVaccine + vac.id;
     const formData = new URLSearchParams(
@@ -571,7 +572,7 @@ export const createControl = async function (controlValues) { //url webservices
  * @param method GET
 */
 export const findControlsForChild = async function (child) { //url webservices
-  debugger
+ 
     let url = urlWebServices.findControl + child
 
     try {
@@ -600,7 +601,7 @@ export const findControlsForChild = async function (child) { //url webservices
 */
 export const updateControl = async function (controlValues) { //url webservices
     let url = urlWebServices.updateControl + controlValues.id;
-    debugger;
+   
     const formData = new URLSearchParams(
         {
             id: controlValues.id,
@@ -649,7 +650,7 @@ export const updateControl = async function (controlValues) { //url webservices
  * @param method DELETE
 */
 export const deleteControl = async function (id) {
-    debugger;
+
     let url = urlWebServices.deleteControl + id;
     try {
         let response = await fetch(url, {

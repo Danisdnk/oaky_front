@@ -30,7 +30,7 @@ export const UpdateVaccineModal = ({ visible, control, child }) => {
 
 
     const onFinish = async (fieldsValues) => {
-        debugger
+   
         const values = {
             ...fieldsValues,
             'applicationDate': fieldsValues['applicationDate'].format('DD-MM-YYYY'),

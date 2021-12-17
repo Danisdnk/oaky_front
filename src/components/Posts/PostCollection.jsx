@@ -1,48 +1,52 @@
-import { Card, Col, Row } from 'antd';
+import { Card, Col, Row, Typography } from 'antd';
 import calendar from "../../img/calendar.png"
 import percent from "../../img/percent.png"
-
+import { Posts } from '../../types/newsPost';
+import { Link, useParams, useLocation, useHistory } from 'react-router-dom';
 export const PostCollection = () => {
 
     const { Meta } = Card;
-
-
-
-
-
-
-    
+    const { handle } = useParams();
+    const location = useLocation();
+    const history = useHistory();
     return (
-        <Row justify="center">
-            <Col span={12} xs={16} sm={15} md={6} lg={8} xl={5}    className='card__margin' >
-                <Card
-                    className='card__border'
-                    hoverable
-                    cover={<img alt="example" src={calendar}/>}
-                >
-                    <Meta title="Calendario de vacunacion" description="revisa el calendario de vacunacion" />
-                </Card>
-            </Col>
-            <Col span={12} xs={16} sm={15} md={6} lg={8} xl={5}     className='card__margin' >
-                <Card
-                    className='card__border'
-                    hoverable
-                    cover={<img alt="example" src={percent}/>}
-                >
-                    <Meta title="Percentiles" description="Percentiles y parámetros generales" />
-                </Card>
-            </Col>
-            <Col span={12} xs={16} sm={15} md={6} lg={8} xl={5}    className='card__margin'>
-                <Card
-                    className='card__border'
-                    hoverable
-                    cover={<img alt="example" src={calendar} />}
-                    >
-                    <Meta title="Información sobre controles médicos" description="gestiona los controles medicos desde aca" />
-                </Card>
-            </Col>
-        </Row >
+        <>
+            <Row justify="center" style={{ backgroundColor: '#ff4029' }}>
+                <Col     >
+                    <Typography.Title level={1} style={{ marginTop: '20% ' }} type="warning">
+                        Articulos
+                    </Typography.Title>
 
+                </Col>
+            </Row>
+            <Row justify="flex-start" >
+
+                {
+                    Posts.map(post => {
+
+                        return (
+                            <Col span={22} xs={22} sm={12} md={12} lg={8} xl={8} xxl={8} className='card__margin' >
+
+                                <Card
+                                  borderer
+                                    description={post.titulo}
+                                    className='card__border'
+                                    hoverable
+                                    cover={<img alt="example" src={percent} />}
+
+                                    onClick={() => { history.push({ pathname: '/post:post', post: post }); }}
+                                >
+                                    <Meta title={post.titulo} description={post.subtitulo} />
+
+                                </Card>
+                            </Col>
+                        )
+                    })
+                }
+
+            </Row >
+
+        </>
 
     )
 }
